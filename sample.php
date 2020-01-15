@@ -1,5 +1,15 @@
 <?php
     $result = '無し';
+    
+    if (array_key_exists('act',$_POST)){
+        $result = mikuji();
+    }
+    
+    function omikuji() {
+        $fortune = ["大吉","吉","忠吉","庄吉","末吉","協"];
+        return $fortune[random_int(0,count($fortune) - 1)];
+    }
+    
 ?>    
 
 
